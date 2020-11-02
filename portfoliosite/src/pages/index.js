@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
-// import { Link } from "gatsby"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
-import { graphql, StaticQuery } from 'gatsby'
+import { Link } from "gatsby"
+import Image from "../components/image"
+import SEO from "../components/seo"
+// import { graphql, StaticQuery } from 'gatsby'
 
 const IndexPage = () => (
   <Layout>
-    {/* <SEO title="Home" />
+    <SEO title="Home" />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -15,9 +15,10 @@ const IndexPage = () => (
       <Image />
     </div>
     <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
+    <Link to="/testpage/">Go to test page</Link> <br />
+    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
 
-    <StaticQuery 
+    {/* <StaticQuery 
       query={ graphql `
         {
           allWordpressPage {
@@ -42,7 +43,7 @@ const IndexPage = () => (
           ))}
         </div>
       )} 
-    />
+    /> */}
   </Layout>
 )
 
