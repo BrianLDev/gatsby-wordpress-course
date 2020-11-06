@@ -9,7 +9,7 @@ const { slash } = require(`gatsby-core-utils`)
 // Will create pages for WordPress pages (route : /{slug})
 // Will create pages for WordPress posts (route : /post/{slug})
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions
+  const { createPage, createRedirect } = actions  // Gatsby's Redux actions
   createRedirect({ fromPath: '/', toPath: '/home', redirectInBrowser: true, isPermanent: true }) // always redirect from index to home
 
   // The “graphql” function allows us to run arbitrary
