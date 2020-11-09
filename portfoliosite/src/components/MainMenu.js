@@ -3,18 +3,20 @@ import { graphql, StaticQuery, Link } from 'gatsby';
 
 const MainMenu = () => (
   <StaticQuery query={graphql `
-    {
-      allWordpressWpApiMenusMenusItems {
-        edges {
-          node {
-            items {
-              title
-              object_slug
-            }
+  {
+    allWordpressWpApiMenusMenusItems(filter: {name: {eq: "Main Menu"}}) {
+      edges {
+        node {
+          items {
+            title
+            object_slug
           }
+          name
         }
       }
-    }`} 
+    }
+  }  
+  `} 
     render={props => (
       <div>
         {props.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(item => (
